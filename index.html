@@ -17,6 +17,18 @@
             width: 200px;
             height: 200px;
         }
+
+        #password {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -34,6 +46,16 @@
         <button id="run">PDF 생성</button>
     </div>
     <iframe id="pdf" style="width: 100%; height: 100%;"></iframe>
+    <div id="password">
+        <input id="pw" placeholder="비밀번호"/>
+    </div>
+    <script>
+        document.getElementById('pw').addEventListener('change', (e) => {
+            if(e.target.value === '1934') {
+                document.getElementById('password').style.visibility = 'hidden';
+            }
+        })
+    </script>
     <script src="./index.js"></script>
 </body>
 
